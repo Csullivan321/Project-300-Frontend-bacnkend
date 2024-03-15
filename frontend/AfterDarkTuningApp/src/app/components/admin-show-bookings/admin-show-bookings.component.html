@@ -1,0 +1,17 @@
+<div class="day-navigation">
+  <button (click)="goToPreviousDay()">Previous Day</button>
+  <button (click)="goToNextDay()">Next Day</button>
+</div>
+
+<div class="bookings-container">
+  <div class="bookings-for-day">
+    <h3>Bookings for {{ currentDate | date: 'fullDate' }}</h3>
+    <ul>
+      <li *ngFor="let booking of dailyBookings">
+        {{ booking.name }} - {{ booking.carMake }} - {{ booking.carModel }} - {{ booking.service }} - {{ booking.time }}
+        <button class="cancel" (click)="deleteBooking(booking._id)">Cancel</button>
+      </li>
+      
+    </ul>
+  </div>
+</div>

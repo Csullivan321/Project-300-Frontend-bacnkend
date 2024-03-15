@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang=""en>
+
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="content-container"> 
+  <div class="wrapper">
+    <form [formGroup]="form">
+        <h1>Enter Details</h1>
+        <div class="grid-container"> 
+            <div class="input-box">
+              <input type="text" placeholder="Name" required formControlName="name">
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Email" required formControlName="email">
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Phone" required formControlName="phone">
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Car Make" required formControlName="carMake">
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Car Model" required formControlName="carModel">
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Registration" required formControlName="registration">
+            </div>
+        </div> 
+        <div class="input-box"> 
+          <select formControlName="service" required>
+            <option value="" disabled selected>Select Service Required</option>
+            <option value="Stage 1">Stage 1 Tune</option>
+            <option value="Stage 2">Stage 2 Tune</option>
+            <option value="Stage 3">Stage 3 Tune</option>
+            <option value="Economy Tune">Economy Tune</option>
+            <option value="Deletes">Deletes</option>
+          </select>
+        </div>
+    </form>
+</div>
+
+      <div class="wrapper2" > 
+        <h1> Choose a Date</h1>
+      <div class="col-md-3">
+        
+        <mat-form-field>
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker" (dateChange)="dateSelected($event.value)">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    
+  
+    <div class="row mt-3" id="showTimes">
+      
+<div *ngIf="selectedDate">
+  <h3>Available Time Slots on {{ selectedDate | date: 'longDate' }}</h3>
+  <div *ngFor="let timeSlot of availableTimes">
+    <button class="times" (click)="selectTime(timeSlot)">
+      {{ timeSlot }}
+    </button>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+ 
+
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+         
+      </div>
+          
+          <button (click)="submitBooking()"type="submit" class="btn2" routerLink="/">Create Booking</button>
+        </div>
+      </div>
+    </div>   
+  </body>
+  </html>
+  

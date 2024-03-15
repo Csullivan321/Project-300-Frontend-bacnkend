@@ -1,0 +1,82 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav-links li {
+  display: inline;
+  padding: 0 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+}
+
+.hero {
+  background-color: #eee;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.services, .gallery, .testimonials, .contact {
+  padding: 40px 20px;
+}
+
+.service-items, .gallery-items, .testimonial-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-item, .testimonial-items blockquote {
+  background-color: #f4f4f4;
+  margin: 10px;
+  padding: 20px;
+  width: calc(33.333% - 20px);
+  text-align: center;
+}
+
+.gallery-items img {
+  width: calc(33.333% - 20px);
+  margin: 10px;
+  height: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+}
+
+form input, form textarea, form button {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+form button {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+ 

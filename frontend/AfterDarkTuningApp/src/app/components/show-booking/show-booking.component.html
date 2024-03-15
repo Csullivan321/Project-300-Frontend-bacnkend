@@ -1,0 +1,19 @@
+<html>
+
+ <body>
+ 
+<div class="booking-grid">
+    <div class="booking" *ngFor="let booking of bookings">
+      <div class="booking-detail">{{ booking.carMake }}</div>
+      <div class="booking-detail">{{ booking.carModel }}</div>
+      <div class="booking-detail">{{ booking.registeration }}</div>
+      <div class="booking-detail">{{ booking.service }}</div>
+      <div class="booking-detail">{{ booking.date | date: 'mediumDate' }}</div>
+      <div class="booking-detail">{{ booking.time }}</div>
+      <button (click)="deleteBooking(booking._id)">Cancel</button>
+    </div>
+     
+  </div> 
+</body>
+  </html>
+  

@@ -1,0 +1,102 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; 
+  margin: 0;
+  padding: 20px;
+}
+
+
+.day-navigation {
+  display: flex;
+  justify-content: center; 
+  margin-top: 50px; 
+  margin-bottom: 30px;
+}
+
+
+.day-navigation button {
+  background-color: #e6e6e6; 
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.day-navigation button:hover {
+  background-color: #d0d0d0; 
+}
+
+
+.bookings-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; 
+}
+
+
+.bookings-for-day {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  width: 80%; 
+  max-width: 600px; 
+}
+
+.bookings-for-day h3 {
+  color: #333; 
+  margin-bottom: 20px;
+}
+
+.bookings-for-day ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+.bookings-for-day li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f9fa; 
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); 
+}
+
+
+a {
+  color: #007bff; 
+  text-decoration: none; 
+}
+
+a:hover {
+  text-decoration: underline; 
+}
+
+
+.cancel {
+  background-color: #e6e6e6; 
+  color: #333;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s; 
+  font-size: 0.9rem; 
+}
+
+.cancel:hover {
+  background-color: #e6e6e6; 
+}
+
+.cancel:active {
+  transform: scale(0.95); 
+}
